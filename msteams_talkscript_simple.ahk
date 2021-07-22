@@ -15,7 +15,7 @@ Hotkey,%KEY_TO_BIND%,ButtonStartScript
 return
 
 ;Mutes/demute Teams, v1
-ButtonStartScript:: ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
+ButtonStartScript: ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
   WinGet, currentWinId ,, A ; Récupération de la fenêtre active en cours
   ;MsgBox, winid=%currentWinId% ; Debug, affichage de l'id de la fenêtre d'origine, non nécessaire
   WinGet teamsWinId, ID,ahk_exe Teams.exe ; Récupération de la fenêtre de Teams
