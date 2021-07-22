@@ -17,26 +17,27 @@ Hotkey,%KEY_TO_BIND%,ButtonStartScript
 return
 
 ButtonStartScript: ; Quand on appuye sur la touche...
-teamsHasBeenDown := false ; Pour vérifier qu'on n'active le micro qu'une seul fois quand la touche est appuyé.
+teamsHasNotBeenDown := true ; Pour vérifier qu'on n'active le micro qu'une seul fois quand la touche est appuyé.
 
 Loop
 {
   GetKeyState, keyState, %KEY_TO_BIND%, p ; On récupére l'état de la touche, si elle est appuyé ou relaché
 
-  if (keyState = "D") AND (!teamsHasBeenDown) ; Quand on reste appuyé sur la touche, mais une seul fois
+  if (keyState = "D") AND (teamsHasNotBeenDown) ; Quand on reste appuyé sur la touche, mais une seul fois
   {
     setTeamsMicAndRefocusToOrigin()
-    teamsHasBeenDown := true
+    teamsHasNotBeenDown := false
   }
   
   if (keyState = "U") ; Quand on relache le raccourcie
   {
     setTeamsMicAndRefocusToOrigin()
-    break
+    teamsHasNotBeenDown := true
   }
 
   Sleep, 100
-}
+} Until teamsHasNotBeenDown
+
 Return
 
 setTeamsMicAndRefocusToOrigin()
