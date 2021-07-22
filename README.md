@@ -1,6 +1,6 @@
 # teamtalkscript
 
-A script write with AutoHotkey language, for mute / unmute Teams, when his window is not focus.
+A script write with AutoHotkey language, for mute / unmute Microsoft Teams, when his window is not focus.
 Current key is **F4**, but you can change it in the script.
 The Teams call window need to be open, but he don't has to be focus.
 
