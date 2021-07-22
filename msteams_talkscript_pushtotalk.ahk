@@ -8,12 +8,20 @@
  */
 
 ;Push to talk for Teams, v1
-F4:: ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
+
+KEY_TO_BIND := "F4" ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
+
+
+
+Hotkey,%KEY_TO_BIND%,ButtonStartScript
+return
+
+ButtonStartScript: ; Quand on appuye sur la touche...
 teamsHasBeenDown := false ; Pour vérifier qu'on n'active le micro qu'une seul fois quand la touche est appuyé.
 
 Loop
 {
-  GetKeyState, keyState, F4, p ; On récupére l'état de la touche, si elle est appuyé ou relaché
+  GetKeyState, keyState, %KEY_TO_BIND%, p ; On récupére l'état de la touche, si elle est appuyé ou relaché
 
   if (keyState = "D") AND (!teamsHasBeenDown) ; Quand on reste appuyé sur la touche, mais une seul fois
   {
