@@ -10,7 +10,7 @@ There is two version :
 
 ## How to use
 
-1. Install AutoHotkey for running this script : hhttps://www.autohotkey.com/
+1. Install AutoHotkey for running this script : https://www.autohotkey.com/
 2. Download the script (choose which one you want, from this repo, download files or clone)
 3. Run the script
 
