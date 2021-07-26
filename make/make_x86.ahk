@@ -1,0 +1,1 @@
+RunWait "C:\Program Files\AutoHotkey\Compiler\Ahk2Exe.exe" /in "..\src\msteams_talkscript.ahk" /out "..\out\msteams-talkscript_x86.exe" /icon "..\icon\icon.ico" /bin "C:\Program Files\AutoHotkey\Compiler\Unicode 32-bit.bin" /compress 0
