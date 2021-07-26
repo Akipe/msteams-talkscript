@@ -17,4 +17,4 @@ There is two version :
 Enjoy ;)
 
 ## Credits
-This projet use image designed by Freepik (https://www.freepik.com) from Flaticon (https://www.flaticon.com/).
+This projet use image (https://www.flaticon.com/free-icon/microphone_2097548) designed by Freepik (https://www.freepik.com) from Flaticon (https://www.flaticon.com/).
