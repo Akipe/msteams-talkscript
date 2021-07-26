@@ -7,7 +7,7 @@
  * ----------------------------------------------------------------------------
  */
 
-;Push to talk for Teams, v1
+;Push to talk for Teams
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.uytu
 #SingleInstance Force ; Allow only one running instance of script.
