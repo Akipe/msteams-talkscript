@@ -15,3 +15,6 @@ There is two version :
 3. Run the script
 
 Enjoy ;)
+
+## Credits
+This projet use image designed by Freepik (https://www.freepik.com) from Flaticon (https://www.flaticon.com/).
