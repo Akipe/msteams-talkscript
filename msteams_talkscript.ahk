@@ -11,7 +11,7 @@
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.uytu
 #SingleInstance Force ; Allow only one running instance of script.
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+;SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 KEY_TO_BIND := "F4" ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
