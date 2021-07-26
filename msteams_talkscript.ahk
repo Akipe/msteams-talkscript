@@ -14,10 +14,10 @@
 ;SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-KEY_TO_BIND := "F4" ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
+keyToBind := "F4" ; Raccourcie clavier pour le script, pour le changer : https://www.autohotkey.com/docs/KeyList.htm
 userModeChoose := 1 ; 1 = pushtotalk, 2 = simplemode
 
-Hotkey,%KEY_TO_BIND%,ButtonStartScript
+Hotkey,%keyToBind%,ButtonStartScript
 
 
 ; GUI
@@ -41,7 +41,7 @@ Gui, Add, Text,, Mode selection
 Gui, Add, Radio, vuserModeChoose  Checked%enablePushToTalk%, Push to talk
 Gui, Add, Radio,                  Checked%enableSimpleBind%, Simple mute / unmute
 Gui, Add, Text,, Key to bind
-Gui, Add, Edit, vKEY_TO_BIND, %KEY_TO_BIND%       ; The ym option starts a new column of controls.
+Gui, Add, Edit, vkeyToBind, %keyToBind%       ; The ym option starts a new column of controls.
 Gui, Add, Button, default, OK  ; The label ButtonOK (if it exists) will be run when the button is pressed.
 Gui, Show,, msteams-talkscript key binding
 return  ; End of auto-execute section. The script is idle until the user does something.
@@ -51,7 +51,7 @@ ButtonOK:
 Gui, Submit  ; Save the input from the user to each control's associated variable.
 Gui, Destroy
 
-Hotkey,%KEY_TO_BIND%,ButtonStartScript
+Hotkey, %keyToBind%, ButtonStartScript
 return
 
 ButtonStartScript: ; Quand on appuye sur la touche...
@@ -64,7 +64,7 @@ if (userModeChoose == "") {
 if (userModeChoose = 1)
 {
   Loop {
-    GetKeyState, keyState, %KEY_TO_BIND%, p ; On récupére l'état de la touche, si elle est appuyé ou relaché
+    GetKeyState, keyState, %keyToBind%, p ; On récupére l'état de la touche, si elle est appuyé ou relaché
 
     if (keyState = "D") AND (teamsHasNotBeenDown) ; Quand on reste appuyé sur la touche, mais une seul fois
     {
