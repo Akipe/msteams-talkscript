@@ -2,9 +2,9 @@
 
 ![icon](icon/icon_200px.png)
 
-**msteams-talkscript** is a script write with AutoHotkey language, for mute / unmute Microsoft Teams, when his window is not focus.
-Current key is **F4**, but you can change it in the option.
-The Teams call window need to be open, but he don't has to be focus.
+**msteams-talkscript** is a script write with AutoHotkey language, for mute / unmute Microsoft Teams, when window is not focus.
+Current key is **F4**, you can change in the option.
+The Teams call window need to be open, but it does not have to be focused.
 
 There are two modes of operation :
 - simple mude / unmute mode for using key like the current Teams implementation.
